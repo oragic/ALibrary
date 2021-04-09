@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste</title>
+</head>
+<body>
+    <% books.forEach((book)=>{%>
+        
+    
+    <h1><%= book.title %> </h1>
+    <h1><%= book.description %> </h1>
+    <h1><%= book.image %> </h1>
+    <h1><%= book.state %> </h1>
+    <h1><%= book.nota %> </h1>
+
+    <%}) %>
+
+    <a href="/adicionar/books">Adicione um livro</a>
+</body>
+</html>
