@@ -22,8 +22,22 @@ const books = {
                     ...book
                 };
             });
-            return res.render( views + "index",{ books:vieweBooks });
+            res.json({ vieweBooks });
         },
+
+        create(req,res){
+            books.data.push({
+
+                title: "asdfasdf",
+                description: "Easdfasdf",
+                image: "asd",
+                state: "gasdg",
+                nota: 10
+        });
+
+            res.redirect('/');
+
+        }
 
     }
 
@@ -37,6 +51,8 @@ routes.get('/', books.controllers.index);
 
     return res.redirect('/');
 });*/
+
+routes.post('/books/create', books.controllers.create);
 
 
 module.exports = routes;
