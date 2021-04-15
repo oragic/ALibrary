@@ -3,6 +3,8 @@ const routes = require('./routes');
 
 const server = express();
 
+server.use(express.json())
+
 server.set('view engine', 'ejs');
 
 server.use(express.static("public"))

@@ -28,11 +28,11 @@ const books = {
         create(req,res){
             books.data.push({
 
-                title: "asdfasdf",
-                description: "Easdfasdf",
-                image: "asd",
-                state: "gasdg",
-                nota: 10
+                title: req.body.title,
+                description: req.body.description,
+                image: req.body.image,
+                state: req.body.state,
+                nota: req.body.nota
         });
 
             res.redirect('/');
